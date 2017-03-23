@@ -89,7 +89,7 @@ public class Latkes
     public String toString(){
 	String print = "[";
 	for( int i = 0; i < _stack.length; i++ ) {
-	    print += _stack[x];
+	    print += _stack[i];
 	    print += " ";
 	}
 	print  += "]";
