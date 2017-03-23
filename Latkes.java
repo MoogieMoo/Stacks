@@ -87,16 +87,16 @@ public class Latkes
     }
 
     public String toString(){
-	String print = "[";
+	String print = "~~~~~~~~~~~~";
 	for( int i = 0; i < _stack.length; i++ ) {
+	    print += "\n";
 	    print += _stack[i];
-	    print += " ";
 	}
-	print  += "]";
+	print += "~~~~~~~~~~~~";
 	return print;
     }
 
-    //tests
+    //test
     public static void main(String[] args){
 
 	//instantiate stack with a 20 pancake capacity
