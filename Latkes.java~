@@ -1,0 +1,112 @@
+// Edwin Mok
+// APCS2 pd5
+// HW#22 -- Stacks on Stacks on Stacks on Stacks...
+// 2017-03-22
+
+/***
+ * class Latkes
+ * SKELETON
+ * (actually: a class to implement a stack of Strings)
+ * uses an array as underlying data structure
+ ***/
+
+public class Latkes 
+{
+
+    private String [] _stack;
+    private int _stackSize;
+
+    //constructor
+    public Latkes(int size) 
+    {
+        _stack = new String[size];//set the size of the dispenser of the stack
+	_stackSize = 0;//how many elements are occupying the dispenser
+    }
+
+    //means of insertion
+    public void push( String s ) 
+    {
+	//if first value ain't a String, that means it has never been instantiated
+        if (_stack[0] == null){
+	    _stack[0] = s;
+	    _stackSize++;
+	}
+	//insert s in front while pushing everything back
+	else if (_stack[_stack.length-1] == null){
+	    int x = _stack.length-1;
+	    while (x > 0){
+		_stack[x] = _stack[x-1];
+		x--;
+	    }
+	    _stack[0] = s;
+	    _stackSize++;
+	}
+	else {
+	    throw new IllegalStateException("array already full, cannot push anymore");
+	}
+    }
+
+    //means of removal
+    public String pop( ) 
+    {
+	//take the value that would be removed
+	String s = _stack[0];
+	//move everything up by 1
+	int x = 0;
+	while (x < _stack.length-1){
+	    _stack[x] = _stack[x+1];
+	    x++;
+	}
+	_stack[_stack.length-1] = null;
+	_stackSize--;
+	//return the removed value;
+	return s;
+    }
+
+    //chk for emptiness
+    public boolean isEmpty() 
+    {
+	return _stackSize == 0;
+    }
+
+    //chk for fullness
+    public boolean isFull() 
+    {
+	return _stackSize == _stack.length;
+    }
+
+    public String toString(){
+	String s = "{";
+	for (int x = 0; x < _stack.length; x++){
+	    s += _stack[x];
+	    s += ",";
+	}
+	s = s.substring(0,s.length()-1);
+	s += "}";
+	return s;
+    }
+
+    //testing purposes
+    public static void main(String[] args){
+	Latkes dispenser = new Latkes(10);
+	System.out.println(dispenser.isEmpty());//true
+	System.out.println(dispenser.isFull());//false
+	System.out.println(dispenser.toString());
+	while (dispenser._stackSize < 10){
+	    dispenser.push("stackin");
+	}
+	System.out.println(dispenser.isEmpty());//false
+	System.out.println(dispenser.isFull());//true
+	System.out.println(dispenser.toString());
+	System.out.println(dispenser._stackSize);
+	while (dispenser._stackSize > 5){
+	    dispenser.pop();
+	}
+	System.out.println(dispenser.isEmpty());//false
+	System.out.println(dispenser.isFull());//false
+	System.out.println(dispenser.toString());
+	System.out.println(dispenser._stackSize);
+    }
+
+}//end class Latkes
+
