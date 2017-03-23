@@ -35,7 +35,7 @@ public class Latkes
 	else if( _stack[ _stack.length - 1 ] == null ) {
 	    int shove = _stack.length-1;
 	    while( shove > 0 ) {
-		_stack[ shove ] = _stack[ x - 1 ];
+		_stack[ shove ] = _stack[ shove - 1 ];
 		shove -= 1;
 	    }
 	    _stack[0] = s;
