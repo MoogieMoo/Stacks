@@ -113,6 +113,7 @@ public class Latkes
 
 	//should print stack of 20 pancakes
 	System.out.println(flapjacks.toString());
+    }
 
 
 }//end class Latkes
