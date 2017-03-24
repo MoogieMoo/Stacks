@@ -28,8 +28,8 @@ public class LatKtS
 	//create a stack to flip
 	Latkes flipper = new Latkes( s.length() );
 	//FILO
-	for ( int i = 1; i < s.length() - 1; i++ ) {
-	    String pusher = s.substring( i - 1, i );
+	for ( int i = 0; i < s.length(); i++ ) {
+	    String pusher = s.substring( i, i );
 	    flipper.push( pusher );
 	}
 
@@ -66,8 +66,8 @@ public class LatKtS
 	String compare;
 
 	//traverse the string
-	for ( int i = 1; i < s.length() - 1; i++ ) {
-	    compare = s.substring( i - 1, i );//checking each character
+	for ( int i = 0; i < s.length(); i++ ) {
+	    compare = s.substring( i, i );//checking each character
 
 	    //push each opening grouper to the stack
 	    if ( compare.equals("{") || compare.equals("[") || compare.equals("(") ) {
