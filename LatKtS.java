@@ -29,12 +29,13 @@ public class LatKtS
 	Latkes flipper = new Latkes( s.length() );
 	//FILO
 	for ( int i = 1; i < s.length() - 1; i++ ) {
-	    flipper.push( s.subString( i - 1, i ) );
+	    String pusher = s.subString( i - 1, i );
+	    flipper.push( pusher );
 	}
 
 	String flipped = "";
 	//pop s back out reversed
-	while ( flipper._stackSize!= 0 ) {
+	while ( s.length() != 0 ) {
 	    flipped += flipper.pop();
 	}
 
