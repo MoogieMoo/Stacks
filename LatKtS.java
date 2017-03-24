@@ -29,7 +29,7 @@ public class LatKtS
 	Latkes flipper = new Latkes( s.length() );
 	//FILO
 	for ( int i = 1; i < s.length() - 1; i++ ) {
-	    String pusher = s.subString( i - 1, i );
+	    String pusher = s.substring( i - 1, i );
 	    flipper.push( pusher );
 	}
 
