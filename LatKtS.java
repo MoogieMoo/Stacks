@@ -80,17 +80,17 @@ public class LatKtS
 	    if( compare.equals("}") || compare.equals("]") || compare.equals(")") ) {
 		//check previous character
 		if ( compare.equals("}") ) {
-		    if ( matcher.pop() != "{" ) {
+		    if ( !matcher.pop().equals( "{" ) ) {
 			return false;
 		    }
 		}
 		else if ( compare.equals("]") ) {
-		    if ( matcher.pop() != "[" ) {
+		    if ( !matcher.pop().equals( "[" ) ) {
 			return false;
 		    }
 		}
 	        else if ( compare.equals(")") ) {
-		    if ( matcher.pop() != "(" ) {
+		    if ( !matcher.pop().equals( "(" ) ) {
 			return false;
 		    }
 		}
