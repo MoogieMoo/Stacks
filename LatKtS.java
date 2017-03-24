@@ -104,7 +104,6 @@ public class LatKtS
     //main method to test
     public static void main( String[] args ) { 
 
-	/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
 	System.out.println(flip("stressed"));
         System.out.println(allMatched( "({}[()])" )); //true
         System.out.println(allMatched( "([)]" ) ); //false
@@ -112,6 +111,7 @@ public class LatKtS
         System.out.println(allMatched( "](){([])}" ) ); //false
         System.out.println(allMatched( "(){([])}(" ) ); //false
         System.out.println(allMatched( "()[[]]{{{{((([])))}}}}" ) ); //true
+	/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
           ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
     }
 
