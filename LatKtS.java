@@ -19,7 +19,7 @@ public class LatKtS
      *                flip("desserts") -> "stressed"
      **********************************************************/
     public static String flip( String s ) 
-    {
+    {        
 	//empty or one-character strings are the same when flipped
 	if ( s.length() == 0  || s.length() == 1 ) {
 	    return s;
@@ -92,12 +92,12 @@ public class LatKtS
 			return false;
 		    }
 		}
-	    }
-
-	    //no other cases that would return false
-	    return true;
+	    }	    
 	}
 	
+	//no other cases that would return false
+	    return true;
+	    
     }//end allMatched()
 
 
