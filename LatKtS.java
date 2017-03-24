@@ -35,8 +35,10 @@ public class LatKtS
 
 	String flipped = "";
 	//pop s back out reversed
-	while ( s.length() != 0 ) {
+	int x = s.length();
+	while ( x != 0 ) {
 	    flipped += flipper.pop();
+	    x -= 1;
 	}
 
 	return flipped;
