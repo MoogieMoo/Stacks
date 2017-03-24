@@ -43,25 +43,10 @@ public class Latkes
     public String pop( ) 
     { 
 	String retStr = "";
-	retStr = _stack[_stackSize-- -1];
+	retStr = _stack[_stackSize---1];
 	return retStr;
     }
-
-    //reverse a String
-    public static String flip( String s ) {
-	String [] flipped;
-	flipped = new String[ capacity ];
-	while( !s.isEmpty() ) {
-	    flipped.push( pop() );
-	}	
-	return flipped;
-    }
-
-    //check for matched parens
-    public static boolean allMatched( String s ) {
-	return false;
-    }
-    
+  
     //chk for emptiness
     public boolean isEmpty() 
     { 
@@ -104,4 +89,3 @@ public class Latkes
     }//end main
     
 }//end class Latkes
-
